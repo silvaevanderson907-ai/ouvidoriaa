@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../site-doces/img/download.png" type="image/x-icon">
+	<title>Ouvidoria do bem</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="hero">
+		<div class="hero__content">
+			<p class="kicker reveal" data-direction="left"> Ouvidoria do bem </p>
+			<h1 class="reveal" data-direction="left">Portal clínico para sua consulta psicológica.</h1>
+			<p class="lede reveal">Ambiente seguro, sigiloso e cuidadoso. Preencha suas preferências e urgência; o pedido abre direto no e-mail para revisão e envio.</p>
+			<div class="actions reveal" data-direction="right">
+				<a class="btn btn--primary 
+				btn--loop" href="#agendamento">Agendar agora</a>
+				<a class="btn btn--ghost" href="#como-funciona">Como funciona</a>
+				<a class="btn btn--ghost" href="#cuidados">Materiais de cuidado</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<div class="badge-strip reveal" data-direction="right">
+			<span class="badge-strip__item">Saúde Mental</span>
+			<span class="badge-strip__item">Cuidado clínico e ético</span>
+			<span class="badge-strip__item">Acolhimento sigiloso</span>
+		</div>
+
+		<section class="section" id="como-funciona">
+			<header class="section__head reveal">
+				<p class="kicker">Transparência</p>
+				<h2>Como o atendimento acontece</h2>
+			</header>
+			<div class="cards">
+				<article class="card reveal" data-direction="left">
+					<h3>1. Pedido</h3>
+					<h5>
+                                <p>Você envia um e-mail com seus dados básicos e preferências de horário.
+                                
+                            </p></h5>
+				</article>
+				<article class="card reveal">
+					<h3>2. Confirmação</h3>
+					<h5><p>O psicólogo confirma o horário disponível ou sugere alternativas.</p></h5>
+				</article>
+				<article class="card reveal" data-direction="right">
+					<h3>3. Sessão</h3>
+					<h5><p>Atendimento sigiloso, on-line ou presencial conforme sua escolha.</p></h5>
+				</article>
+			</div>
+		</section>
+
+		<section class="section section--muted">
+			<header class="section__head reveal">
+				<p class="kicker">Confidencialidade</p>
+				<h2>Sigilo clínico garantido</h2>
+				<p class="muted">As informações enviadas são usadas apenas para agendamento. Seu gestor não é comunicado e nenhum dado é compartilhado sem autorização.</p>
+			</header>
+		</section>
+
+		<section class="section" id="agendamento">
+			<header class="section__head reveal">
+				<p class="kicker">Agendamento</p>
+				<h2>Peça sua consulta em poucos passos</h2>
+				<p class="muted">Preencha os campos abaixo e clique em “Enviar pedido”. Um e-mail será aberto com suas informações para você revisar e enviar.</p>
+			</header>
+			<form class="form-grid reveal" id="form-agenda" autocomplete="off">
+				<label>
+					<span>Nome completo </span>
+					<input id="ag-nome" type="text" name="nome" placeholder="Seu nome" required>
+				</label>
+				<label>
+					<span> Seu E-mail  </span>
+					<input id="ag-email" type="email" name="email" placeholder="voce@empresa.com" required>
+				</label>
+				<label>
+					<span>Área</span>
+					<select id="ag-area" name="area">
+						<option value="">Selecione</option>
+						<option>Atendimento</option>
+					</select>
+				</label>
+				<label>
+					<span>Preferência de horário</span>
+					<select id="ag-horario" name="horario" autocomplete="off">
+						<option value="">Selecione</option>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+                        <option>Online</option>
+					</select>
+				</label>
+				<label>
+					<span>Urgência</span>
+					<select id="ag-urgencia" name="urgencia">
+						<option value="">Selecione</option>
+                        <option>Preciso com urgência</option>
+						<option>Preciso em 24h</option>
+						<option>Preciso em 48h</option>
+						<option>Preciso esta semana</option>
+						<option>Posso esperar</option>
+					</select>
+				</label>
+				<label>
+					<span>Tipo de crise</span>
+					<select id="ag-crise" name="crise">
+						<option value="">Selecione</option>
+						<option>Ansiedade intensa ou pânico</option>
+						<option>Burnout ou exaustão extrema</option>
+						<option>Luto ou perda recente</option>
+						<option>Conflitos ou abuso no trabalho</option>
+						<option>Crise familiar/relacional</option>
+						<option>Outro tipo de crise</option>
+					</select>
+				</label>
+				<label class="full-row">
+					<span>Motivo (opcional)</span>
+					<textarea id="ag-motivo" name="motivo" rows="3" placeholder="Ex.: ansiedade, retorno de afastamento, apoio após incidente"></textarea>
+				</label>
+				<div class="form-actions reveal" data-direction="right">
+					<button class="btn btn--primary" type="button" id="btn-agendar">Enviar pedido</button>
+					<p class="muted small">O botão abrirá seu e-mail com as informações preenchidas. Você pode editar antes de enviar.</p>
+				</div>
+			</form>
+		</section>
+
+		<section class="section" id="cuidados">
+			<header class="section__head reveal">
+				<p class="kicker">Cuidados e materiais</p>
+				<h2>Para acolher colaboradores e equipes</h2>
+				<p class="muted">Use estes visuais para campanhas internas, workshops ou kits rápidos de acolhimento. Reforce a cultura de saúde mental com mensagens claras.</p>
+			</header>
+			<div class="gallery">
+				<article class="gallery__item reveal" data-direction="left">
+					<img src="../site-doces/img/roda-de-conversa-1280x720.webp" data-src="roda-de-conversa-1280x720.webp" alt="Pessoas socializando em roda de conversa" class="gallery__image">
+					<div class="gallery__body">
+						<h3>Roda de acolhimento</h3>
+						<p class="muted">Guia rápido para conduzir conversas seguras em time, com combinados de sigilo e tempo de fala.</p>
+						<div class="tags">
+							<span class="pill">Facilitador</span>
+							<span class="pill">Roteiro 30 min</span>
+							<span class="pill">Checklist de segurança</span>
+						</div>
+						<div class="card-actions">
+							<a class="btn btn--ghost btn--small" href="mailto:depatamentodepsicologos@gmail.com?subject=Pedir%20guia%20de%20roda%20de%20acolhimento">Pedir este material</a>
+						</div>
+					</div>
+				</article>
+				<article class="gallery__item reveal">
+					<img src="../site-doces/img/019b647f-ea75-73b0-9dac-88abae317856.jpg" data-src="019b647f-ea75-73b0-9dac-88abae317856.jpg" alt="Cartões coloridos com mensagens" class="gallery__image">
+					<div class="gallery__body">
+						<h3>Cartazes de campanha</h3>
+						<p class="muted">Templates para divulgar canal de apoio psicológico, política de confidencialidade e sinais de alerta.</p>
+						<div class="tags">
+							<span class="pill">Template editável</span>
+							<span class="pill">QR para agendar</span>
+							<span class="pill">Sinais de alerta</span>
+						</div>
+						<div class="card-actions">
+							<a class="btn btn--ghost btn--small" href="mailto:depatamentodepsicologos@gmail.com?subject=Pedir%20cartazes%20de%20campanha">Pedir este material</a>
+						</div>
+					</div>
+				</article>
+				<article class="gallery__item reveal" data-direction="right">
+					<img src="../site-doces/img/20230512_saudemental.jpg" data-src="20230512_saudemental.jpg" alt="Mesa com caderno e fone" class="gallery__image">
+					<div class="gallery__body">
+						<h3>Kit pós-crise</h3>
+						<p class="muted">Roteiro para acolhimento inicial, encaminhamento e follow-up após incidentes críticos.</p>
+						<div class="tags">
+							<span class="pill">Passo a passo</span>
+							<span class="pill">Encaminhamentos</span>
+							<span class="pill">Follow-up 7 dias</span>
+						</div>
+						<div class="card-actions">
+							<a class="btn btn--ghost btn--small" href="mailto:depatamentodepsicologos@gmail.com?subject=Pedir%20kit%20pos-crise">Pedir este material</a>
+						</div>
+					</div>
+				</article>
+			</div>
+			<div class="actions reveal actions--spaced" data-direction="right">
+				<a class="btn btn--primary" href="#agendamento">Agendar com psicólogo</a>
+				<a class="btn btn--ghost" href="mailto:depatamentodepsicologos@gmail.com?subject=Solicitar%20materiais%20de%20cuidado">Pedir materiais por e-mail</a>
+			</div>
+		</section>
+
+		<section class="section" id="relatos">
+			<header class="section__head reveal">
+				<p class="kicker">Relatos reais</p>
+				<h2>O impacto na vida das pessoas</h2>
+				<p class="muted">Depoimentos preservando confidencialidade, compartilhados com consentimento para inspirar cuidado.</p>
+			</header>
+			<div class="testimonials">
+				<article class="testimonial card reveal" data-direction="left">
+					<p class="quote">“Eu estava à beira do burnout. Em poucas sessões, entendi limites e combinei ajustes com meu gestor. Hoje me sinto ouvida.”</p>
+					
+				</article>
+				<article class="testimonial card reveal">
+					<p class="quote">“O acolhimento pós-incidente evitou afastamento maior. Recebi roteiro claro de autocuidado e follow-up em 7 dias.”</p>
+				
+				</article>
+				<article class="testimonial card reveal" data-direction="right">
+					<p class="quote">“Sou líder e tinha medo de abordar o tema. O treino de segurança psicológica me deu linguagem e passos simples para apoiar o time.”</p>
+					
+				</article>
+			</div>
+		</section>
+
+		<section class="section" id="abuso-psicologico">
+			<header class="section__head reveal">
+				<p class="kicker">Abuso psicológico no trabalho</p>
+				<h2>Relatos de episódios e como agir</h2>
+				<p class="muted">Exemplos anônimos para reconhecer sinais, buscar ajuda e envolver canais formais.</p>
+			</header>
+			<div class="cards">
+				<article class="card reveal" data-direction="left">
+					<h3>Coação</h3>
+					<p>Me sentia coagida para fazer outras tarefas que se caracterizavam desvio de função.</p>
+					<p class="meta">— “Camilla” funcionária</p>
+				</article>
+				<article class="card reveal">
+					<h3>Sentimentos após esses episódios</h3>
+					<p>Me sentia muito mal, pois eu precisava realizar tarefas que não eram da minha função e isso me deixava angustiada, tendo crises de ansiedade, e me sentindo sobrecarregada, sem saber a quem recorrer.</p>
+				</article>
+				<article class="card reveal" data-direction="right">
+					<h3>Ameaças veladas</h3>
+					<p>Gestores faziam comentários sutis sobre demissão caso a pessoa não estivesse satisfeita com a sua situação e custiar perdas e danos que eles entenderam que foram os funcionários.</p>
+				</article>
+			</div>
+			<div class="alert reveal" data-direction="right">
+				<p><strong>Se você vive algo similar:</strong> registre evidências, busque o canal interno (RH/ouvidoria/compliance) e procure apoio psicológico. Em crises, acione o CVV (188) ou serviços locais de emergência.</p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer reveal">
+		<p>Precisa de apoio imediato? Procure o canal interno de crise ou o CVV (188).</p>
+	</footer>
+
+	<script src="head.js"></script>
+</body>
+</html>
