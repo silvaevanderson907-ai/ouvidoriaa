@@ -99,4 +99,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   })();
 
+  // Função para forçar recarregamento das imagens (cache-bust opcional)
+  function reloadAllImages(options = { cacheBust: true }) {
+    const { cacheBust } = options;
+    document.querySelectorAll('img').forEach(img => {
+      try {
+        const raw = (img.getAttribute('data-src') || img.getAttribute('src') || '').trim();
+        if (!raw) return;
+        let url = raw;
+        // se raw for um caminho relativo curto (nome do arquivo), expandir para ../site-doces/img/
+        if (!url.includes('/') && document.location) {
+          url = `../site-doces/img/${url}`;
+        }
+        if (cacheBust) {
+          const base = url.split('?')[0];
+          const sep = base.includes('?') ? '&' : '?';
+          url = `${base}${sep}cb=${Date.now()}`;
+        }
+        img.src = url;
+      } catch (e) { /* ignore */ }
+    });
+    console.log('reloadAllImages: imagens recarregadas', options);
+  }
+
+  // Expor a função globalmente e ouvir evento customizado
+  window.reloadImages = reloadAllImages;
+  window.addEventListener('reload-images', (e) => {
+    const cacheBust = e?.detail?.cacheBust !== false;
+    reloadAllImages({ cacheBust });
+  });
+
+  // Recarrega uma vez após carregamento para atualizar possíveis recursos em cache
+  setTimeout(() => reloadAllImages({ cacheBust: true }), 300);
+
 });
